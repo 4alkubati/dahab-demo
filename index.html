@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blue Hole Hostel Dahab (DEMO SITE)</title>
+<meta name="description" content="Demo one-page site for a Dahab hostel: rooms, prices, map and WhatsApp booking.">
+<style>
+:root{--sea:#0b6e8a;--deep:#073b4c;--sand:#f6efe3;--sun:#f4a259;--ink:#10262e}
+*{box-sizing:border-box}body{margin:0;font:17px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--sand)}
+.demo{background:#ffd23f;text-align:center;padding:8px 12px;font-size:14px;font-weight:600}
+header{background:linear-gradient(160deg,var(--deep),var(--sea));color:#fff;padding:56px 20px 48px;text-align:center}
+h1{margin:0 0 8px;font-size:2rem}header p{margin:0 auto 24px;max-width:30em;opacity:.92}
+.btn{display:inline-block;background:#25d366;color:#05301a;font-weight:700;text-decoration:none;padding:14px 26px;border-radius:999px}
+.lang{position:absolute;top:44px;right:14px;background:#ffffff22;color:#fff;border:1px solid #fff8;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px}
+main{max-width:760px;margin:auto;padding:8px 20px 90px}
+section{margin:32px 0}h2{color:var(--deep);margin:0 0 12px}
+.rooms{display:grid;gap:12px}.room{background:#fff;border-radius:14px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 4px #0001}
+.room b{font-size:1.15rem}.price{color:var(--sea);font-weight:700;white-space:nowrap}
+ul{padding-left:20px}iframe{width:100%;height:260px;border:0;border-radius:14px}
+.float{position:fixed;bottom:14px;left:14px;right:14px;text-align:center;background:#25d366;color:#05301a;font-weight:700;text-decoration:none;padding:15px;border-radius:14px;box-shadow:0 4px 14px #0004}
+footer{text-align:center;font-size:13px;opacity:.7;padding:0 20px 90px}
+[dir=rtl]{text-align:right}[dir=rtl] .lang{right:auto;left:14px}
+</style>
+</head>
+<body>
+<div class="demo" data-en="DEMO SITE — made to show what your hostel's page could look like. Not a real business." data-ar="موقع تجريبي — لعرض شكل صفحة فندقك. ليس نشاطاً حقيقياً.">DEMO SITE — made to show what your hostel's page could look like. Not a real business.</div>
+<header>
+<button class="lang" id="lang">العربية</button>
+<h1 data-en="Blue Hole Hostel" data-ar="بلو هول هوستل">Blue Hole Hostel</h1>
+<p data-en="Dorms and private rooms in Dahab. 5 minutes to the sea, free breakfast, diving trips arranged at the door." data-ar="غرف مشتركة وخاصة في دهب. ٥ دقائق من البحر، فطار مجاني، ورحلات غوص من الباب.">Dorms and private rooms in Dahab. 5 minutes to the sea, free breakfast, diving trips arranged at the door.</p>
+<a class="btn" href="https://wa.me/0000000000?text=Hi%2C%20I%27d%20like%20to%20book" data-en="Book on WhatsApp" data-ar="احجز عبر واتساب">Book on WhatsApp</a>
+</header>
+<main>
+<section><h2 data-en="Rooms & prices" data-ar="الغرف والأسعار">Rooms & prices</h2>
+<div class="rooms">
+<div class="room"><div><b data-en="Dorm bed (6)" data-ar="سرير مشترك (٦)">Dorm bed (6)</b><br><small data-en="Fan, locker, curtain" data-ar="مروحة، خزانة، ستارة">Fan, locker, curtain</small></div><span class="price">$9 / night</span></div>
+<div class="room"><div><b data-en="Private double" data-ar="غرفة خاصة مزدوجة">Private double</b><br><small data-en="Own bathroom, A/C" data-ar="حمام خاص، تكييف">Own bathroom, A/C</small></div><span class="price">$25 / night</span></div>
+</div><small>Placeholder prices for the demo.</small></section>
+<section><h2 data-en="Good to know" data-ar="معلومات مفيدة">Good to know</h2>
+<ul><li data-en="Check-in from 2 pm, check-out 11 am" data-ar="الدخول من ٢ ظهراً، الخروج ١١ صباحاً">Check-in from 2 pm, check-out 11 am</li>
+<li data-en="Free Wi-Fi and breakfast" data-ar="واي فاي وفطار مجاني">Free Wi-Fi and breakfast</li>
+<li data-en="We answer WhatsApp within the hour" data-ar="نرد على واتساب خلال ساعة">We answer WhatsApp within the hour</li></ul></section>
+<section><h2 data-en="Find us" data-ar="موقعنا">Find us</h2>
+<iframe loading="lazy" title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=34.48%2C28.47%2C34.53%2C28.52&layer=mapnik"></iframe></section>
+</main>
+<footer>Demo made by Kira. Your real page would use your name, photos, prices and Google Business listing.</footer>
+<a class="float" href="https://wa.me/0000000000?text=Hi%2C%20I%27d%20like%20to%20book" data-en="Book on WhatsApp" data-ar="احجز عبر واتساب">Book on WhatsApp</a>
+<script>
+var ar=false;document.getElementById('lang').onclick=function(){ar=!ar;
+document.documentElement.lang=ar?'ar':'en';document.documentElement.dir=ar?'rtl':'ltr';this.textContent=ar?'English':'العربية';
+document.querySelectorAll('[data-en]').forEach(function(e){e.textContent=e.getAttribute(ar?'data-ar':'data-en')})}
+</script>
+</body>
+</html>
